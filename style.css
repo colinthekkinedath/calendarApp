@@ -79,7 +79,6 @@ body {font-family: Verdana, sans-serif;}
 @media screen and (max-width: 290px) {
   .weekdays li, .days li {width: 12.2%;}
 }
-
 .hover_bkgr_fricc{
   background:rgba(0,0,0,.4);
   cursor:pointer;
