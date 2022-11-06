@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+    <link rel = "stylesheet" href = "style.css">
+    <title>Calendar App</title>
+</head>
+  <style>
+    
+    /* The Modal (background) */
+    .modal {
+      display: none; /* Hidden by default */
+      position: fixed; /* Stay in place */
+      z-index: 1; /* Sit on top */
+      padding-top: 100px; /* Location of the box */
+      left: 0;
+      top: 0;
+      width: 100%; /* Full width */
+      height: 100%; /* Full height */
+      overflow: auto; /* Enable scroll if needed */
+      background-color: rgb(0,0,0); /* Fallback color */
+      background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    }
+    
+    /* Modal Content */
+    .modal-content {
+      background-color: #fefefe;
+      margin: auto;
+      padding: 20px;
+      border: 1px solid #888;
+      width: 80%;
+      border-radius: 15px;
+    }
+    
+    /* The Close Button */
+    .close {
+      color: #aaaaaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+    }
+    
+    .close:hover,
+    .close:focus {
+      color: #000;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    </style>
+    </head>
+    <body>
+        
+    <!-- Trigger/Open The Modal -->
+    <!-- <button id="myBtn">Open Modal</button> -->
+    
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+    
+      <!-- Modal content -->
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <!-- <p>Some text in the Modal..</p> -->
+        <div class="btn-group" style="width:100%">
+          <a href="agenda.html"><button style="width:33.3%"> Exam📝 </button></a>
+          <a href="canvas.html"><button style="width:33.3%"> Canvas💻 </button></a>
+          <a href="agenda.html"><button style="width:33.3%"> To-Do✅ </button></a>
+          <a href="classBuilder.html"><button style="width:33.3%"> Class Builder🏫 </button></a>
+          <!-- <button href = index.html style="width:33.3%">Student👩‍🎓</button>
+          <button href = index.html style="width:33.3%">Professional💻</button>
+          <button href = index.html style="width:33.3%">Life🏋️</button> -->
+        </div>
+      </div>
+    
+    </div>
+    
+
+    <div class="month">      
+        <ul>
+          <li class="prev">&#10094;</li>
+          <li class="next">&#10095;</li>
+          <li>
+            November<br>
+            <span style="font-size:18px">2022</span>
+          </li>
+        </ul>
+      </div>
+      
+      <ul class="weekdays">
+        <li>Mo</li>
+        <li>Tu</li>
+        <li>We</li>
+        <li>Th</li>
+        <li>Fr</li>
+        <li>Sa</li>
+        <li>Su</li>
+      </ul>
+      
+      <ul class="days">  
+        <li><a href = agenda.html style = "color: #eee;"> 1 </a></li>
+        <!-- <li><a href = agenda.html style = "color: #777; text-decoration: none">1</a></li> -->
+        <li><a><button id="myBtn">1</button></a></li>
+        <li><a><button id="myBtn2">2</button></a></li>
+        <li><a><button id="myBtn3">3</button></a></li>
+        <li><a><button id="myBtn4">4</button></a></li>
+        <li><a><button style="background-color:orange" id="myBtn5">5</button></a></li>
+        <li><a><button id="myBtn6">6</button></a></li>
+        <li><a><button id="myBtn7">7</button></a></li>
+        <li><a><button id="myBtn8">8</button></a></li>
+        <li><a><button id="myBtn9">9</button></a></li>
+        <li><a><button id="myBtn10">10</button></a></li>
+        <li><a><button id="myBtn11">11</button></a></li>
+        <li><a><button id="myBtn12">12</button></a></li>
+        <li><a><button id="myBtn13">13</button></a></li>
+        <li><a><button id="myBtn14">13</button></a></li>
+        <li><a><button id="myBtn15">15</button></a></li>
+        <li><a><button id="myBtn16">16</button></a></li>
+        <li><a><button id="myBtn17">17</button></a></li>
+        <li><a><button id="myBtn18">18</button></a></li>
+        <li><a><button id="myBtn19">19</button></a></li>
+        <li><a><button id="myBtn20">20</button></a></li>
+        <li><a><button id="myBtn21">21</button></a></li>
+        <li><a><button id="myBtn22">22</button></a></li>
+        <li><a><button id="myBtn23">23</button></a></li>
+        <li><a><button id="myBtn24">24</button></a></li>
+        <li><a><button id="myBtn25">25</button></a></li>
+        <li><a><button id="myBtn26">26</button></a></li>
+        <li><a><button id="myBtn27">27</button></a></li>
+        <li><a><button id="myBtn28">28</button></a></li>
+        <li><a><button id="myBtn29">29</button></a></li>
+        <li><a><button id="myBtn30">30</button></a></li>
+
+        <!-- <li><a id="myBtn" style = "color: #777; text-decoration: none">1</a></li> -->
+        <!-- <li></li><button id="myBtn" style = "color: #777; text-decoration: none" >1</button></li> -->
+        <!-- <li><a href = agenda.html style = "color: #777; text-decoration: none">2</a></li>
+        <li><a href = agenda.html style = "color: #777; text-decoration: none">3</a></li>
+        <li><a href = agenda.html style = "color: #777; text-decoration: none">4</a></li>
+        <li><span class="active"><a href = agenda.html style = "color: #777; text-decoration: none">5</a></span></li>
+        <li><a href = agenda.html style = "color: #777; text-decoration: none">6</a></li>
+        <li><a href = agenda.html style = "color: #777; text-decoration: none">7</a></li>
+        <li><a href = agenda.html style = "color: #777; text-decoration: none">8</a></li>
+        <li><a href = agenda.html style = "color: #777; text-decoration: none">9</a></li> -->
+        <!-- <li><a href = agenda.html style = "color: #777; text-decoration: none">10</a></li>
+        <li><a href = agenda.html style = "color: #777; text-decoration: none">11</a></li>
+        <li><a href = agenda.html style = "color: #777; text-decoration: none">12</a></li>
+        <li><a href = agenda.html style = "color: #777; text-decoration: none">13</a></li> -->
+        <!-- <li><a href = agenda.html style = "color: #777; text-decoration: none">14</a></li>
+        <li><a href = agenda.html style = "color: #777; text-decoration: none">15</a></li>
+        <li><a href = agenda.html style = "color: #777; text-decoration: none">16</a></li>
+        <li><a href = agenda.html style = "color: #777; text-decoration: none">17</a></li>
+        <li><a href = agenda.html style = "color: #777; text-decoration: none">18</a></li>
+        <li><a href = agenda.html style = "color: #777; text-decoration: none">19</a></li>
+        <li><a href = agenda.html style = "color: #777; text-decoration: none">20</a></li>
+        <li><a href = agenda.html style = "color: #777; text-decoration: none">21</a></li>
+        <li><a href = agenda.html style = "color: #777; text-decoration: none">22</a></li>
+        <li><a href = agenda.html style = "color: #777; text-decoration: none">23</a></li>
+        <li><a href = agenda.html style = "color: #777; text-decoration: none">24</a></li>
+        <li><a href = agenda.html style = "color: #777; text-decoration: none">25</a></li>
+        <li><a href = agenda.html style = "color: #777; text-decoration: none">26</a></li>
+        <li><a href = agenda.html style = "color: #777; text-decoration: none">27</a></li>
+        <li><a href = agenda.html style = "color: #777; text-decoration: none">28</a></li>
+        <li><a href = agenda.html style = "color: #777; text-decoration: none">29</a></li>
+        <li><a href = agenda.html style = "color: #777; text-decoration: none">30</a></li> -->
+      </ul>
+
+      <script>
+        // Get the modal
+        var modal = document.getElementById("myModal");
+        
+        // Get the button that opens the modal
+        // var btn = document.getElementById("myBtn2");
+        var btn = document.getElementById("myBtn");
+        
+        var btn2 = document.getElementById("myBtn2");
+        var btn3 = document.getElementById("myBtn3");
+        var btn4 = document.getElementById("myBtn4");
+        var btn5 = document.getElementById("myBtn5");
+        var btn6 = document.getElementById("myBtn6");
+        var btn7 = document.getElementById("myBtn7");
+        var btn8 = document.getElementById("myBtn8");
+        var btn9 = document.getElementById("myBtn9");
+        var btn10 = document.getElementById("myBtn10");
+        var btn11 = document.getElementById("myBtn11");
+        var btn12 = document.getElementById("myBtn12");
+        var btn13 = document.getElementById("myBtn13");
+        var btn14 = document.getElementById("myBtn14");
+        var btn15 = document.getElementById("myBtn15");
+        var btn16 = document.getElementById("myBtn16");
+        var btn17 = document.getElementById("myBtn17");
+        var btn18 = document.getElementById("myBtn18");
+        var btn19 = document.getElementById("myBtn19");
+        var btn20 = document.getElementById("myBtn20");
+        var btn21 = document.getElementById("myBtn21");
+        var btn22 = document.getElementById("myBtn22");
+        var btn23 = document.getElementById("myBtn23");
+        var btn24 = document.getElementById("myBtn24");
+        var btn25 = document.getElementById("myBtn25");
+        var btn26 = document.getElementById("myBtn26");
+        var btn27 = document.getElementById("myBtn27");
+        var btn28 = document.getElementById("myBtn28");
+        var btn29 = document.getElementById("myBtn29");
+        var btn30 = document.getElementById("myBtn30");
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+        
+        // When the user clicks the button, open the modal 
+        btn.onclick = function() {
+          modal.style.display = "block";
+        }
+
+        btn2.onclick = function() {
+          modal.style.display = "block";
+        }
+        btn3.onclick = function() {
+          modal.style.display = "block";
+        }
+        btn4.onclick = function() {
+          modal.style.display = "block";
+        }
+        btn5.onclick = function() {
+          modal.style.display = "block";
+        }
+        btn6.onclick = function() {
+          modal.style.display = "block";
+        }
+        btn8.onclick = function() {
+          modal.style.display = "block";
+        }
+        btn9.onclick = function() {
+          modal.style.display = "block";
+        }
+        btn10.onclick = function() {
+          modal.style.display = "block";
+        }
+        btn11.onclick = function() {
+          modal.style.display = "block";
+        }
+        btn12.onclick = function() {
+          modal.style.display = "block";
+        }
+        btn13.onclick = function() {
+          modal.style.display = "block";
+        }
+        btn14.onclick = function() {
+          modal.style.display = "block";
+        }
+        btn15.onclick = function() {
+          modal.style.display = "block";
+        }
+        btn16.onclick = function() {
+          modal.style.display = "block";
+        }
+
+        btn17.onclick = function() {
+          modal.style.display = "block";
+        }
+        btn18.onclick = function() {
+          modal.style.display = "block";
+        }
+        btn19.onclick = function() {
+          modal.style.display = "block";
+        }
+        btn20.onclick = function() {
+          modal.style.display = "block";
+        }
+        btn21.onclick = function() {
+          modal.style.display = "block";
+        }
+        btn22.onclick = function() {
+          modal.style.display = "block";
+        }
+        btn23.onclick = function() {
+          modal.style.display = "block";
+        }
+        btn24.onclick = function() {
+          modal.style.display = "block";
+        }
+        btn25.onclick = function() {
+          modal.style.display = "block";
+        }
+        btn26.onclick = function() {
+          modal.style.display = "block";
+        }
+        btn27.onclick = function() {
+          modal.style.display = "block";
+        }
+        btn28.onclick = function() {
+          modal.style.display = "block";
+        }
+        btn29.onclick = function() {
+          modal.style.display = "block";
+        }
+        btn30.onclick = function() {
+          modal.style.display = "block";
+        }
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() {
+          modal.style.display = "none";
+        }
+        
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+          if (event.target == modal) {
+            modal.style.display = "none";
+          }
+        }
+        </script>
+
+</body>
+</html>
+
